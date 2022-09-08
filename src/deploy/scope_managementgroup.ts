@@ -10,7 +10,7 @@ export async function DeployManagementGroupScope(azPath: string, region: string,
     }
 
     // check if mode is set as this will be ignored
-    if (deploymentMode && deploymentMode != "validate") {
+    if (deploymentMode && deploymentMode != "validate" && deploymentMode != "incremental") {
         core.warning("This deployment mode is not supported for management group scoped deployments, this parameter will be ignored!")
     }
     // create the parameter list

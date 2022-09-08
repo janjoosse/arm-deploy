@@ -10,7 +10,7 @@ export async function DeploySubscriptionScope(azPath: string, region: string, te
     }
 
     // check if mode is set as this will be ignored
-    if (deploymentMode && deploymentMode != "validate") {
+    if (deploymentMode && deploymentMode != "validate" && deploymentMode != "incremental") {
         core.warning("This deployment mode is not supported for subscription scoped deployments, this parameter will be ignored!")
     }
 
